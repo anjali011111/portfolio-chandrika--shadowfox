@@ -6,7 +6,7 @@ A modern, elegant, and interactive portfolio showcasing my journey in technology
 ---
 
 # 🌐 Live Portfolio
-🔗 [Visit My Portfolio](chandrik.netlify.app)
+🔗 chandrik.netlify.app
 
 ---
 
