@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAI CHANDRIKANJALI  — AI/ML Engineer & Developer Portfolio">
+  <title> R SAI CHANDRIKANJALI — AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=Syne:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── LOADING SCREEN ─── -->
+  <div id="loader">
+    <div class="loader-name"> R SAI CHANDRIKANJALI</div>
+    <div class="loader-bar"><div class="loader-fill" id="lf"></div></div>
+  </div>
+
+  <!-- ─── SCROLL PROGRESS ─── -->
+  <div id="spb"></div>
+
+  <!-- ─── CANVAS LAYERS ─── -->
+  <canvas id="star-canvas"></canvas>
+  <canvas id="bubble-canvas"></canvas>
+  <canvas id="trail-canvas"></canvas>
+
+  <!-- ─── CURSOR ─── -->
+  <div id="cursor-core"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── THEME & MUSIC PANEL ─── -->
+  <div id="ctrl-panel">
+    <button class="ctrl-btn" id="t-night" onclick="setTheme('night')" title="Night">
+      <span class="ctrl-tooltip">Night</span>🌑
+    </button>
+    <button class="ctrl-btn" id="t-light" onclick="setTheme('light')" title="Light">
+      <span class="ctrl-tooltip">Light</span>☀️
+    </button>
+    <button class="ctrl-btn active" id="t-pro" onclick="setTheme('pro')" title="Professional">
+      <span class="ctrl-tooltip">Pro</span>💼
+    </button>
+    <div class="ctrl-sep"></div>
+    <button class="ctrl-btn" id="music-btn" onclick="toggleMusic()" title="Music">
+      <span class="ctrl-tooltip">Music</span>
+    </button>
+  </div>
+
+  <!-- ─── NAV ─── -->
+  <nav>
+    <a href="#hero" class="nav-brand">SCA</a>
+    <ul class="nav-links">
+      <li><a href="#about"        data-text="About">About</a></li>
+      <li><a href="#skills"       data-text="Skills">Skills</a></li>
+      <li><a href="#projects"     data-text="Projects">Projects</a></li>
+      <li><a href="#achievements" data-text="Awards">Awards</a></li>
+      <li><a href="#timeline"     data-text="Journey">Journey</a></li>
+      <li><a href="#contact"      data-text="Contact">Contact</a></li>
+    </ul>
+    <a href="#resume" class="nav-cta"><span>Resume</span></a>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-g">
+        <div class="hero-left">
+          <div class="hero-tag">
+            <span class="hero-dot"></span>
+            B.Tech AIML · Computer Science · 2024-28
+          </div>
+          <h1 class="hero-name">
+            R SAI <em>CHANDRIKANJALI</em>
+          </h1>
+          <p class="hero-role">
+            <span id="typed-text"></span><span class="tcaret"></span>
+          </p>
+          <p class="hero-desc">
+            Building intelligent systems at the edge of possibility — 
+            where machine learning meets creative engineering and 
+            real-world impact. Passionate about AI, NLP, and 
+            solving problems that matter.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn-p">View Projects ↓</a>
+            <a href="#contact"  class="btn-g"><span>Let's Talk →</span></a>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat">
+              <span class="hstat-n" data-t="150">0+</span>
+              <span class="hstat-l">LeetCode</span>
+            </div>
+            <div class="hstat">
+              <span class="hstat-n" data-t="10">0+</span>
+              <span class="hstat-l">Projects</span>
+            </div>
+            <div class="hstat">
+              <span class="hstat-n" data-t="8">0</span>
+              <span class="hstat-l">Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PHOTO COLUMN ── -->
+        <div class="photo-frame">
+          <div class="photo-wrap">
+            <div class="photo-inner">
+              <img src="PHOTO.jpeg" alt="SAI CHANDRIKANJALI" class="photo-img">
+            </div>
+            <div class="photo-shine"></div>
+          </div>
+          <div class="pc pc-tl"></div>
+          <div class="pc pc-tr"></div>
+          <div class="pc pc-bl"></div>
+          <div class="pc pc-br"></div>
+          <div class="photo-badge">
+            <span class="pb-t">SAI CHANDRIKANJALI</span>
+            <span class="pb-s">AI/ML Engineer · Open to Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="hero-scroll-lbl">Scroll</span>
+      <div class="scroll-track"><div class="scroll-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-g">
+        <div class="reveal">
+          <p class="sec-eye">About Me</p>
+          <h2 class="sec-h">Crafting Intelligence<br>One <em>Model</em> at a Time</h2>
+        </div>
+        <div class="reveal" style="--d:.18s">
+          <p>I'm a <strong>B.Tech AIML student</strong> with a deep passion for systems that think, learn, and adapt. My work lives at the intersection of <strong>Artificial Intelligence</strong>, Machine Learning, and creative engineering.</p>
+          <p>Beyond models and matrices, I'm driven by <strong>problem-solving at every level</strong> — from cracking complex DSA challenges on LeetCode to architecting full-stack applications. I've served as <strong>Class Representative</strong> for two consecutive years and led teams through national-level hackathons.</p>
+          <p>I hold myself to one standard: the best AI is invisible. It solves real problems so naturally that users forget the technology beneath. That's the bar I build toward.</p>
+          <div class="about-stats">
+            <div><span class="ast-n" data-t="150">0</span><span class="ast-l">LeetCode solved</span></div>
+            <div><span class="ast-n" data-t="3">0</span><span class="ast-l">Hackathons</span></div>
+            <div><span class="ast-n" data-t="2">0</span><span class="ast-l">Leadership roles</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec-eye">Expertise</p>
+        <h2 class="sec-h">Technology <em>Arsenal</em></h2>
+      </div>
+      <div class="skill-g reveal" style="--d:.15s">
+        <div class="sk-col">
+          <div class="sk-cat">AI &amp; ML</div>
+          <ul class="sk-items">
+            <li>Machine Learning   <span class="sk-dot"></span></li>
+            <li>Deep Learning      <span class="sk-dot"></span></li>
+            <li>NLP / LLMs         <span class="sk-dot"></span></li>
+            <li>Computer Vision    <span class="sk-dot"></span></li>
+            <li>TensorFlow / Keras <span class="sk-dot"></span></li>
+            <li>PyTorch             <span class="sk-dot"></span></li>
+          </ul>
+        </div>
+        <div class="sk-col">
+          <div class="sk-cat">Languages</div>
+          <ul class="sk-items">
+            <li>Python      <span class="sk-dot"></span></li>
+            <li>Java        <span class="sk-dot"></span></li>
+            <li>C++         <span class="sk-dot"></span></li>
+            <li>JavaScript  <span class="sk-dot"></span></li>
+            <li>SQL         <span class="sk-dot"></span></li>
+            <li>python libraries<span class="sk-dot"></span></li>
+          </ul>
+        </div>
+        <div class="sk-col">
+          <div class="sk-cat">Web &amp; Tools</div>
+          <ul class="sk-items">
+            <li>React / Next.js  <span class="sk-dot"></span></li>
+            <li>FastAPI / Flask  <span class="sk-dot"></span></li>
+            <li>HTML / CSS       <span class="sk-dot"></span></li>
+            <li>Git &amp; GitHub <span class="sk-dot"></span></li>
+            <li>Docker           <span class="sk-dot"></span></li>
+            <li>REST APIs        <span class="sk-dot"></span></li>
+          </ul>
+        </div>
+        <div class="sk-col">
+          <div class="sk-cat">Data &amp; Cloud</div>
+          <ul class="sk-items">
+            <li>Pandas / NumPy    <span class="sk-dot"></span></li>
+            <li>Scikit-learn       <span class="sk-dot"></span></li>
+            <li>AWS Cloud          <span class="sk-dot"></span></li>
+            <li>Streamlit          <span class="sk-dot"></span></li>
+            <li>MySQL              <span class="sk-dot"></span></li>
+            <li>Data Visualization <span class="sk-dot"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS  (no numbers · with images)
+  ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="proj-hd reveal">
+        <p class="sec-eye">Work</p>
+        <h2 class="sec-h">Selected <em>Projects</em></h2>
+        <p>Systems that think, tools that matter.</p>
+      </div>
+      <div class="proj-g">
+
+        <!-- ── Study Streak Cracker (wide) ── -->
+        <div class="pc-card wide reveal">
+          <div class="proj-img-wrap">
+            <img
+              src="study streak cracker.png"
+              alt="Study Streak Cracker preview"
+              class="proj-img"
+              loading="lazy">
+          </div>
+          <div class="pc-card-body">
+            <h3>Study Streak Cracker</h3>
+            <p>A machine learning-powered application that helps users maintain consistent study habits through personalized recommendations and progress tracking.</p>
+            <div class="tags">
+              <span class="tag">CSS</span>
+              <span class="tag">HTML</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">NLP</span>
+              <span class="tag">React.js</span>
+            </div>
+            <a href=" https://anjali011111.github.io/study-streak-cracker/" class="plink">View Project →</a>
+          </div>
+        </div>
+
+        <!-- ── Data Visualizer Platform ── -->
+        <div class="pc-card reveal" style="--d:.08s">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=900&q=80"
+              alt="Code and algorithm visualization on screen"
+              class="proj-img"
+              loading="lazy">
+          </div>
+          <div class="pc-card-body">
+            <h3>Data Visualizer Platform</h3>
+            <p>Interactive visualization for 40+ data structures and algorithms with step-by-step animation, complexity analysis panel, and synchronized code highlighting. Used by 200+ students for exam prep.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Canvas API</span>
+            </div>
+            <a href="#" class="plink">View Project →</a>
+          </div>
+        </div>
+
+        <!-- ── Railway Database MERN Stack Project (wide) ── -->
+        <div class="pc-card wide reveal" style="--d:.12s">
+          <div class="proj-img-wrap">
+            <img
+              src=" Railway.png"
+              alt="Railway database  project preview"
+              class="proj-img"
+              loading="lazy">
+          </div>
+          <div class="pc-card-body">
+            <h3>Railway Database  Project</h3>
+            <p>A full-stack railway management system built with the MERN stack for managing trains, routes, bookings, and database records with a clean, responsive interface.</p>
+            <div class="tags">
+              <span class="tag">Mysql</span>
+              <span class="tag">Express</span>
+              <span class="tag">javascript</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <a href="https://anjali011111.github.io/railway-system/" class="plink">View Project →</a>
+          </div>
+        </div>
+
+        <!-- ── Smart Portfolio Analyzer ── -->
+        <div class="pc-card reveal" style="--d:.08s">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=700&q=80"
+              alt="Financial charts and portfolio analysis"
+              class="proj-img"
+              loading="lazy">
+          </div>
+          <div class="pc-card-body">
+            <h3>Smart Portfolio Analyzer</h3>
+            <p>Financial analysis combining news sentiment NLP with quantitative ML models for risk scoring and portfolio return prediction with live dashboards.</p>
+            <div class="tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">NLP</span>
+            </div>
+            <a href="#" class="plink">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ACHIEVEMENTS
+  ══════════════════════════════════════ -->
+  <section id="achievements">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec-eye">Recognition</p>
+        <h2 class="sec-h">Achievements &amp; <em>Certifications</em></h2>
+      </div>
+      <div class="ach-g">
+
+        <div class="ach-item reveal">
+          <span class="ach-icon">⚡</span>
+          <div class="ach-body">
+            <h4>LeetCode Top 15%</h4>
+            <p>150+ problems solved across all difficulty tiers with consistent streaks and contest participation.</p>
+            <span class="ach-badge">Algorithm Mastery</span>
+          </div>
+        </div>
+
+        <div class="ach-item reveal" style="--d:.1s">
+          <span class="ach-icon">☁️</span>
+          <div class="ach-body">
+            <h4>AWS Cloud Practitioner</h4>
+            <p>Certified in cloud architecture fundamentals, EC2, S3, Lambda, and distributed systems design.</p>
+            <span class="ach-badge">Cloud Computing</span>
+          </div>
+        </div>
+
+        <div class="ach-item reveal" style="--d:.05s">
+          <span class="ach-icon">🎓</span>
+          <div class="ach-body">
+            <h4>Class Representative · 2 Years</h4>
+            <p>Elected representative for 70+ student cohort — managing events, coordinating faculty-student relations.</p>
+            <span class="ach-badge">Leadership</span>
+          </div>
+        </div>
+
+        <div class="ach-item reveal" style="--d:.12s">
+          <span class="ach-icon">🏆</span>
+          <div class="ach-body">
+            <h4>Hackathon  — National AI Track</h4>
+            <p>Top 20 finish among 600+ teams. Built and shipped a working AI product in 36 hours as team .</p>
+            <span class="ach-badge">Innovation</span>
+          </div>
+        </div>
+
+        <div class="ach-item reveal" style="--d:.08s">
+          <span class="ach-icon">🧠</span>
+          <div class="ach-body">
+            <h4>DeepLearning.AI Specialization</h4>
+            <p>Completing all  courses in the Deep Learning Specialization by Andrew Ng with distinction.</p>
+            <span class="ach-badge">Deep Learning</span>
+          </div>
+        </div>
+
+        <div class="ach-item reveal" style="--d:.15s">
+          <span class="ach-icon">📄</span>
+          <div class="ach-body">
+            <h4>Research Co-Author</h4>
+            <p>Co-authored paper on NLP model optimization techniques. going to Present at departmental research symposium.</p>
+            <span class="ach-badge">Research</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TIMELINE
+  ══════════════════════════════════════ -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec-eye">Journey</p>
+        <h2 class="sec-h">The Story <em>So Far</em></h2>
+      </div>
+      <div class="tl-wrap" id="tl"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       RESUME
+  ══════════════════════════════════════ -->
+  <section id="resume">
+    <div class="wrap">
+      <div class="resume-box reveal">
+        <div>
+          <h2>Ready to build<br><em>something great?</em></h2>
+          <p>Download my complete resume or reach out directly. I'm actively seeking internship and research opportunities in AI/ML engineering.</p>
+        </div>
+        <div class="resume-btns">
+          <a href="RESUME.pdf" class="btn-p" download>Download CV ↓</a>
+          <a href="#contact" class="btn-g"><span>Contact →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-g">
+        <div class="reveal">
+          <p class="sec-eye">Contact</p>
+          <h2 class="sec-h">Let's <em>Connect</em></h2>
+          <p>Open to internships, research collaborations, and projects at the edge of AI. If you're building something interesting, I'd love to hear about it.</p>
+          <ul class="soc-links">
+            <li><a href="https://github.com" target="_blank">
+              <span class="soc-lbl">GitHub</span>
+              <span class="soc-val">https://github.com/anjali011111</span>
+              <span class="soc-arrow">↗</span>
+            </a></li>
+            <li><a href="https://linkedin.com" target="_blank">
+              <span class="soc-lbl">LinkedIn</span>
+              <span class="soc-val">https://www.linkedin.com/in/rsca01/</span>
+              <span class="soc-arrow">↗</span>
+            </a></li>
+            <li><a href="https://leetcode.com" target="_blank">
+              <span class="soc-lbl">LeetCode</span>
+              <span class="soc-val">https://leetcode.com/u/chandrikanjali011111/</span>
+              <span class="soc-arrow">↗</span>
+            </a></li>
+            <li><a href="mailto:saichandrikanjali@email.com">
+              <span class="soc-lbl">Email</span>
+              <span class="soc-val">redrouthuchandrika@gmail.com</span>
+              <span class="soc-arrow">↗</span>
+            </a></li>
+          </ul>
+        </div>
+        <form class="cf reveal" style="--d:.18s" onsubmit="submitForm(event)">
+          <div class="fl">
+            <label class="flbl">Name</label>
+            <input type="text" class="fin" placeholder="Your name" required>
+          </div>
+          <div class="fl">
+            <label class="flbl">Email</label>
+            <input type="email" class="fin" placeholder="your@email.com" required>
+          </div>
+          <div class="fl">
+            <label class="flbl">Subject</label>
+            <input type="text" class="fin" placeholder="Internship / Collaboration / Hello">
+          </div>
+          <div class="fl">
+            <label class="flbl">Message</label>
+            <textarea class="fin" placeholder="Tell me about the opportunity or project..."></textarea>
+          </div>
+          <button type="submit" class="btn-p" style="width:fit-content;border:none;cursor:none">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="foot-t">© 2024-28 SAI CHANDRIKANJALI · AI/ML Engineer</span>
+    <span class="foot-t">Built with precision · Deployed with passion</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
