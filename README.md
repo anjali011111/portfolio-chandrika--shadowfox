@@ -76,11 +76,9 @@ Collection of Data Structures and Algorithms solutions and coding progress.
 
 ---
 
-# 📬 Contact Me
 
-- 💼 LinkedIn: https://linkedin.com/in/yourprofile
-- 💻 GitHub: https://github.com/yourusername
-- 📧 Email: yourmail@example.com
+
+
 
 ---
 
